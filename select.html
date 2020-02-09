@@ -4,12 +4,43 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 	<script>
-			var mark = prompt('your mark');
-		if(mark >= 100){
-			document.write('greater');
+		var mark = null;
+		var mark = new Array();
+			 mark[0] = prompt('value 1');
+		 mark[1] = prompt('value 2');
+		 mark[2] = prompt('value 3');
+		if((mark[0] < mark[1]) && (mark[0] < mark[2])){
+				document.write('' + mark[0]);
+				
+				if(mark[1] < mark[2]){
+					
+					document.write(',' + mark[1]);
+					document.write(',' + mark[2]);
 			
-		}else{
-			document.write('less than 100');
+				}else{
+					
+					document.write(',' + mark[2]);
+					document.write(',' + mark[1]);
+				
+				}
+		}else if((mark[1] < mark[0]) && (mark[1] < mark[2])){
+		document.write('' + mark[1]);
+			if(mark[0] < mark[2]){
+				document.write(',' + mark[0]);
+				document.write(',' + mark[2]);
+			}else{
+				document.write(',' + mark[2]);
+				document.write(',' + mark[0]);
+			}
+		}else if((mark[2] < mark[1] && mark[2] < mark[0] )){
+			document.write('' + mark[2]);
+				if(mark[1] < mark[0]){
+				document.write(',' + mark[1]);
+				document.write(',' + mark[0]);
+				}else{
+					document.write(',' + mark[0]);
+				document.write(',' + mark[1]);
+				}
 		}
 	</script>
 </head>
